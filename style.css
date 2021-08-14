@@ -125,7 +125,7 @@ h2 {
     z-index: 10;
 }
 
-.topNr {
+.topNr{
     position: absolute;
     top: 10px;
     left: 10px;
@@ -180,4 +180,52 @@ p {
         height: 149px;
         font-size: 3rem;
     }
+    .topNr,.bottomNr{
+        font-size: 1rem;
+    }
+}
+@media (max-width:499px) {
+    .wrap {
+        width: 100vw;
+        height: 100vh;
+        display: grid;
+        grid-template-areas:
+            "container "
+            "container2  "
+            "container1";
+        grid-template-columns: repeat(1, 1fr);
+        grid-template-rows: repeat(3, 20%);
+    }
+
+    body {
+        background-size: auto;
+    }
+
+    .container1 img {
+        width: 20%;
+    }
+
+    .card {
+        width: 60px;
+        height: 93px;
+        font-size: 2rem;
+    }
+    .topNr,.bottomNr{
+        font-size: 1rem;
+    }
+    .topNr{
+        top: 3px;
+        left: 3px; 
+    }
+    .bottomNr{
+        bottom: 3px;
+        right: 3px;  
+    }
+    h1{
+        font-size: 2rem;
+    }
+    h2{
+        font-size: 1rem;
+    }
+    
 }
