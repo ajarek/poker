@@ -1,0 +1,183 @@
+* {
+    margin: 0;
+    bottom: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: url('./tlo.jpeg');
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.wrap {
+    width: 100vw;
+    height: 100vh;
+    display: grid;
+    grid-template-areas: "container container1"
+        "container2  container1";
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    padding: 0 30px;
+}
+
+.container {
+    position: relative;
+    grid-area: container;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container1 {
+    grid-area: container1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    margin-top: 10px;
+    color: white;
+    font-size: 1.5rem;
+}
+
+.container1 img {
+    width: 50%;
+}
+
+.container1 input {
+    text-align: center;
+    font-size: 1.5rem;
+    height: 40px;
+    width: 160px;
+    border: none;
+    outline: none;
+    background: transparent;
+    color: white;
+    border-bottom: 3px solid;
+}
+
+.container1 button {
+    font-size: 1.5rem;
+    padding: 5px 15px;
+    margin-top: 10px;
+    box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.3);
+    border: none;
+    border-radius: 5px;
+}
+
+.container1 button:hover {
+    transform: scale(1.05);
+    background-color: black;
+    color: white;
+}
+
+.container1 p {
+    margin-top: 20px;
+}
+
+.container1 h2 {
+    color: gold;
+}
+
+.container2 {
+    position: relative;
+    grid-area: container2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+h2 {
+    position: absolute;
+    color: white;
+}
+
+.card {
+    position: relative;
+    box-shadow: 20px 20px 40px rgba(0, 0, 0, 0.5);
+    border-top: 1px solid rgba(255, 255, 255, 0.5);
+    border-left: 1px solid rgba(255, 255, 255, 0.5);
+    border-radius: 10px;
+    width: 143px;
+    height: 224px;
+    font-size: 8rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: whitesmoke;
+    margin-right: 8px;
+}
+
+.card::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    box-shadow: 20px 20px 40px rgba(0, 0, 0, 0.5);
+    background: url('./revers.jpg');
+    background-size: cover;
+    border-radius: 10px;
+    z-index: 10;
+}
+
+.topNr {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    font-size: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.bottomNr {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    font-size: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transform: rotate(180deg);
+}
+
+p {
+    line-height: 0.7;
+}
+
+.red {
+    color: red;
+}
+
+@media (max-width:990px) {
+    .wrap {
+        width: 100vw;
+        height: 100vh;
+        display: grid;
+        grid-template-areas:
+            "container "
+            "container2  "
+            "container1";
+        grid-template-columns: repeat(1, 1fr);
+        grid-template-rows: repeat(3, 30%);
+    }
+
+    body {
+        background-size: auto;
+    }
+
+    .container1 img {
+        width: 30%;
+    }
+
+    .card {
+        width: 95px;
+        height: 149px;
+        font-size: 3rem;
+    }
+}
