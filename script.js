@@ -69,7 +69,7 @@ function reveal() {
         oblicz(result, COMPUTER)
         oblicz(result1, PLAYER)
         whoWon()
-        // setTimeout("window.location.reload()", 4000);
+        setTimeout("window.location.reload()", 5000);
     }
 }
 
