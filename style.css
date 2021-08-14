@@ -222,11 +222,17 @@ p {
         bottom: 3px;
         right: 3px;  
     }
-    h1{
-        font-size: 2rem;
+    h1,h3{
+        font-size: 1rem;
     }
     h2{
+        font-size: 0.6rem;
+    }
+    .container1 input {
+        text-align: center;
         font-size: 1rem;
+        height: 20px;
+        width: 120px;
     }
     
 }
