@@ -164,7 +164,9 @@ p {
     .container1 img {
         width: 70%;
     }
-    
+    .card{
+        font-size: 6rem;
+    }
 
    
     
@@ -199,6 +201,7 @@ p {
         margin-bottom: 2rem; 
     }
    
-
+    .card{
+        font-size: 4rem;
     
 }
